@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width,user-scalable=no'>
+    <title>Модальные окна</title>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" type="text/css" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" type="text/css" href="fonts/stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="css/selectric.css" />
+    <link rel='stylesheet' type='text/css' href='css/slick.css'>
+    <link rel='stylesheet' type='text/css' href='css/micromodal.css'>
+    <link rel='stylesheet' type='text/css' href='css/fancybox.css'>
+    <link rel='stylesheet' type='text/css' href='css/style.css'>
+
+</head>
+
+<body>
+    <div class="pageWrapper">
+        <header class="header">
+            <div class="container">
+                <div class="headerContent">
+                    <div class="logoWrapper">
+                        <a href="#"></a>
+                        <img src="img/logo-color.svg" alt="logo">
+                        <span class="text">Российский производитель профессионального
+                            электроакустического оборудования</span>
+                    </div>
+                    <nav class="menu">
+                        <ul>
+                            <li>
+                                <a href="#" class="sub">Каталог</a>
+                                <ul class="subMenu">
+                                    <li><a href="#">Серия Вега</a></li>
+                                    <li><a href="#">Серия Спика</a></li>
+                                    <li><a href="#">Серия Мира</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">О компании</a></li>
+                            <li><a href="#">медиа</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="container">
+                <button class="btn btnGreen" data-custom-open="modalCall">заказать звонок</button>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footerContent">
+                    <div class="footerLeft">
+                        <span class="title">КАТАЛОГ</span>
+                        <ul class="menuFooter">
+                            <li><a href="#">Серия Вега</a></li>
+                            <li><a href="#">Серия Спика</a></li>
+                            <li><a href="#">Серия Мира</a></li>
+                        </ul>
+                        <ul class="social">
+                            <li><a href="#"><span class="icon icon-youtube"></span></a></li>
+                            <li><a href="#"><span class="icon icon-t"></span></a></li>
+                            <li><a href="#"><span class="icon icon-vk"></span></a></li>
+                            <li><a href="#"><span class="icon icon-telegram"></span></a></li>
+                            <li><a href="#"><span class="icon icon-yandex"></span></a></li>
+                        </ul>
+                    </div>
+                    <div class="footerRight">
+                        <ul>
+                            <li>Россия, 119590, Москва, Минская ул., 2Ж</li>
+                            <li>ООО «Сонорусс Аудио-Групп»</li>
+                            <li><a href="#">+7 (495) 781-61-33</a></li>
+                        </ul>
+                        <a href="#" class="infoTextWork">Разработано в Internet Team</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="micromodal-slide modal" id="modalCall" aria-hidden="true">
+            <div class="modal__overlay" tabindex="-1" data-micromodal-close="">
+                <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modalCall-title">
+                    <button class="modal__close" aria-label="Close modal" data-micromodal-close="">
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="modal__content" id="modalCall-content">
+                        <form class="modalBlock">
+                            <h2 class="cap">заказать <strong>звонок</strong></h2>
+                            <div class="inputList">
+                                <div class="inputWrapper">
+                                    <input type="text" placeholder="Имя">
+                                </div>
+                                <div class="inputWrapper">
+                                    <input type="email" placeholder="E-mail">
+                                </div>
+                                <div class="inputWrapper">
+                                    <input type="email" placeholder="Телефон">
+                                </div>
+                            </div>
+                            <div class="checkBlock">
+                                <input type="checkbox" id="personal">
+                                <label for="personal">Я согласен на обработку <a href="#">персональных
+                                        данных</a></label>
+                            </div>
+                            <div class="controls">
+                                <button type="submit" class="btn btnGreen">отправить</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script type='text/javascript' src='js/jquery-3.6.0.min.js'></script>
+<script type='text/javascript' src='js/jquery.selectric.min.js'></script>
+<script type='text/javascript' src='js/slick.min.js'></script>
+<script type='text/javascript' src='js/micromodal.min.js'></script>
+<script type='text/javascript' src='js/fancybox.umd.js'></script>
+<script type='text/javascript' src='js/script.js'></script>
+
+</html>

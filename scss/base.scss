@@ -1,0 +1,325 @@
+body {
+    width: 100%;
+    max-width: 2560px;
+    margin: 0 auto;
+    font-family: $fontFutura;
+    overflow-x: hidden;
+}
+
+a {
+    $trans: all 0.3s;
+    @include transition($trans);
+}
+
+b,
+strong {
+    color: inherit;
+    font-weight: bold;
+}
+
+::selection {
+    color: #fff;
+    background-color: #000000;
+    -webkit-text-fill-color: #fff;
+}
+
+.ui-widget,
+input,
+textarea,
+button {
+    font-family: $fontFutura;
+}
+
+input,
+button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.container {
+    width: 1400px;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.pageWrapper {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    &.main {
+        .menu {
+            ul {
+                li {
+                    a {
+                        color: #fff;
+                        &:hover {
+                            color: #418974;
+                        }
+                    }
+                }
+            }
+        }
+        .logoWrapper {
+            .text {
+                color: #fff;
+            }
+        }
+        .header {
+            &::before,
+            &::after {
+                background-color: #fff;
+            }
+        }
+    }
+
+    .footer {
+        margin-top: auto;
+    }
+}
+
+.logoWrapper {
+    @include transition(filter 0.3s);
+    @include invisLink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px;
+        color: #000;
+        margin-left: 38px;
+        position: relative;
+        top: -5px;
+        display: block;
+    }
+}
+
+.inputWrapper {
+    position: relative;
+
+    input {
+        background-color: #fff;
+        border: 1px solid #bfbfbf;
+        width: 100%;
+        height: 55px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #000000;
+        padding: 0 30px;
+        &::placeholder {
+            color: #000;
+        }
+    }
+    textarea {
+        resize: none;
+        height: 107px;
+        width: 100%;
+        background-color: #fff;
+        border: 1px solid #bfbfbf;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #000000;
+        color: #6a4b4b;
+        padding: 20px 30px;
+        &::placeholder {
+            color: #000;
+        }
+    }
+}
+
+.slide-arrow {
+    position: absolute;
+    bottom: 18px;
+    overflow: hidden;
+    @include transition(all 0.3s);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 55px;
+    letter-spacing: 0.05em;
+    color: #418974;
+    z-index: 5;
+    width: 56px;
+    padding-top: 15px;
+    &::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-family: "icomoon" !important;
+        font-size: 6px;
+    }
+    &.slick-disabled {
+        color: #bdbdbd;
+    }
+    &.slick-prev {
+        &:before {
+            content: "\e900";
+        }
+        .slide-text {
+            text-align: right;
+        }
+    }
+
+    &.slick-next {
+        &:before {
+            content: "\e901";
+        }
+        .slide-text {
+            text-align: left;
+        }
+    }
+    .slide-text {
+        display: block;
+        width: 100%;
+    }
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 57px;
+    li {
+        margin: 4.5px;
+        &.slick-active {
+            button {
+                background: #d3145b;
+            }
+        }
+        button {
+            cursor: pointer;
+            width: 9px;
+            height: 9px;
+            background: #e9e1e1;
+            color: transparent;
+            overflow: hidden;
+            @include border-radius(50%);
+            @include transition(all 0.3s);
+            &:hover {
+                background: #d3145b;
+            }
+        }
+    }
+}
+
+.modal {
+    font-family: $fontFutura;
+    display: none;
+}
+
+.modal.is-open {
+    display: block;
+    z-index: 10;
+}
+
+.modal__container {
+    padding: 30px 43px 23px;
+    max-width: 489px;
+    width: 100%;
+    background-image: url("../img/back-toh-modal.png");
+    background-position: calc(100% - 5px) 29px;
+    background-repeat: no-repeat;
+}
+
+.blockTitle {
+    position: relative;
+    display: block;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 55px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #000000;
+    padding-left: 10px;
+    @include after {
+        width: 15px;
+        height: 15px;
+        left: -19px;
+        top: 20px;
+        background-color: #418974;
+        @include border-radius(50%);
+    }
+    @include before {
+        right: calc(100% - 188px);
+        top: -76px;
+        z-index: -1;
+    }
+    strong {
+        font-weight: 700;
+    }
+}
+
+.capTitle {
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 55px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.backGreenBlock {
+    width: 1053px;
+    height: 441px;
+    background-color: #deebe4;
+    position: absolute;
+    left: calc(50% - 93px);
+    top: 84px;
+    z-index: -1;
+    &.bottom {
+        top: auto;
+        bottom: 285px;
+        height: 411px;
+        left: calc(50% - 54px);
+    }
+}
+
+.checkBlock {
+    input {
+        display: none;
+        &:checked {
+            & + label {
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    label {
+        cursor: pointer;
+        position: relative;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #000;
+        display: block;
+        padding-left: 26px;
+        @include before {
+            width: 13px;
+            height: 13px;
+            left: 1px;
+            top: 0;
+            background-color: #fff;
+            border: 1px solid #418974;
+        }
+        @include after {
+            width: 7px;
+            height: 7px;
+            left: 4px;
+            top: 3px;
+            background-color: #418974;
+            opacity: 0;
+        }
+        a {
+            color: #418974;
+            text-decoration: underline;
+            &:hover {
+                text-decoration-color: transparent;
+            }
+        }
+    }
+}

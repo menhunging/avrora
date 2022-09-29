@@ -1,0 +1,76 @@
+.btn {
+    position: relative;
+    display: inline-block;
+    font-weight: 450;
+    font-size: 14px;
+    line-height: 55px;
+    @include transition(all 0.3s);
+    padding: 0 31px;
+    z-index: 5;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    @include after {
+        position: relative;
+        width: 9px;
+        height: 9px;
+        border: solid 1px #fff;
+        @include border-radius(50%);
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        top: -2px;
+        margin-left: 10px;
+    }
+    &.btnGreen {
+        background-color: #418974;
+        color: #fff;
+        &:hover {
+            background-color: #286855;
+        }
+    }
+    &.btnFullGreen {
+        border: 1px solid #418974;
+        color: #418974;
+        background-color: transparent;
+        &:after {
+            border-color: #418974;
+        }
+        &:hover {
+            background-color: #418974;
+            color: #fff;
+            &:after {
+                border-color: #fff;
+            }
+        }
+    }
+}
+
+.modal__close {
+    position: absolute;
+    width: 27px;
+    display: block;
+    right: 11px;
+    top: 50px;
+    span {
+        display: block;
+        background-color: #000;
+        width: 100%;
+        height: 3px;
+        position: relative;
+        @include transform(rotate(-45deg));
+        & + span {
+            top: -2px;
+            @include transform(rotate(45deg));
+        }
+    }
+}
+
+@media (max-width: 479px) {
+    .btn {
+    }
+}
