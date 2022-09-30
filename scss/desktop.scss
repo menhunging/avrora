@@ -70,20 +70,34 @@
 }
 
 .header {
-    position: relative;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    &.fixed {
+        background-color: #fff;
+        padding-bottom: 50px;
+        &::before,
+        &::after {
+            bottom: 64px;
+        }
+    }
     @include before {
         left: 0;
-        bottom: 16px;
+        bottom: 14px;
         width: calc(50% - 283px);
         height: 1px;
         background-color: #dadada;
+        @include transition(all 0s);
     }
     @include after {
         right: 0;
-        bottom: 16px;
+        bottom: 14px;
         width: calc(50% - 226px);
         height: 1px;
         background-color: #dadada;
+        @include transition(all 0s);
     }
     .headerContent {
         padding: 50px 0;
@@ -556,6 +570,11 @@
             &:last-child {
                 @include before {
                     background-color: #418974;
+                }
+            }
+            &:first-child {
+                span {
+                    color: #000;
                 }
             }
         }

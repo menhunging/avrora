@@ -6,6 +6,16 @@ $(document).ready(function () {
         awaitCloseAnimation: true
     })
 
+    if ($(".header").length) {
+        let header = $('.header');
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 1) {
+                header.addClass('fixed');
+            } else {
+                header.removeClass('fixed');
+            }
+        });
+    }
 
     if ($(".menuBurger").length) {
         $(".menuBurger").on("click", function () {
@@ -207,11 +217,3 @@ $(document).ready(function () {
     }
 
 })
-
-$(window).resize(function () {
-    if ($('.steps').length > 0) {
-        if ($(window).width() < 768) {
-
-        }
-    }
-});

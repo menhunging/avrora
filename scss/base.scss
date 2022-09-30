@@ -49,33 +49,52 @@ button {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    padding-top: 121px;
     &.main {
-        .menu {
-            ul {
-                li {
-                    a {
+        .header {
+            &:not(.fixed) {
+                &::before,
+                &::after {
+                    background-color: #fff;
+                }
+                .logoWrapper {
+                    .text {
                         color: #fff;
-                        &:hover {
-                            color: #418974;
+                    }
+                    .notfixed{
+                        display: block;
+                    }
+                    .fixed{
+                        display: none;
+                    }
+                }
+                .menuBurger {
+                    .line {
+                        background-color: #fff;
+                    }
+                }
+                .menu {
+                    ul {
+                        li {
+                            a {
+                                color: #fff;
+                                &:hover {
+                                    color: #418974;
+                                }
+                            }
                         }
                     }
                 }
             }
         }
+    }
+    .header {
         .logoWrapper {
-            .text {
-                color: #fff;
+            .notfixed {
+                display: none;
             }
-        }
-        .header {
-            &::before,
-            &::after {
-                background-color: #fff;
-            }
-        }
-        .menuBurger {
-            .line {
-                background-color: #fff;
+            .fixed {
+                display: block;
             }
         }
     }

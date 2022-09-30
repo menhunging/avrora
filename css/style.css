@@ -246,21 +246,34 @@ button {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  padding-top: 121px;
 }
-.pageWrapper.main .menu ul li a {
+.pageWrapper.main .header:not(.fixed)::before, .pageWrapper.main .header:not(.fixed)::after {
+  background-color: #fff;
+}
+.pageWrapper.main .header:not(.fixed) .logoWrapper .text {
   color: #fff;
 }
-.pageWrapper.main .menu ul li a:hover {
+.pageWrapper.main .header:not(.fixed) .logoWrapper .notfixed {
+  display: block;
+}
+.pageWrapper.main .header:not(.fixed) .logoWrapper .fixed {
+  display: none;
+}
+.pageWrapper.main .header:not(.fixed) .menuBurger .line {
+  background-color: #fff;
+}
+.pageWrapper.main .header:not(.fixed) .menu ul li a {
+  color: #fff;
+}
+.pageWrapper.main .header:not(.fixed) .menu ul li a:hover {
   color: #418974;
 }
-.pageWrapper.main .logoWrapper .text {
-  color: #fff;
+.pageWrapper .header .logoWrapper .notfixed {
+  display: none;
 }
-.pageWrapper.main .header::before, .pageWrapper.main .header::after {
-  background-color: #fff;
-}
-.pageWrapper.main .menuBurger .line {
-  background-color: #fff;
+.pageWrapper .header .logoWrapper .fixed {
+  display: block;
 }
 .pageWrapper .footer {
   margin-top: auto;
@@ -775,7 +788,18 @@ button {
 }
 
 .header {
-  position: relative;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+.header.fixed {
+  background-color: #fff;
+  padding-bottom: 50px;
+}
+.header.fixed::before, .header.fixed::after {
+  bottom: 64px;
 }
 .header:before {
   content: "";
@@ -786,10 +810,14 @@ button {
   -o-transition: all 0.3s;
   transition: all 0.3s;
   left: 0;
-  bottom: 16px;
+  bottom: 14px;
   width: calc(50% - 283px);
   height: 1px;
   background-color: #dadada;
+  -webkit-transition: all 0s;
+  -moz-transition: all 0s;
+  -o-transition: all 0s;
+  transition: all 0s;
 }
 .header:after {
   content: "";
@@ -800,10 +828,14 @@ button {
   -o-transition: all 0.3s;
   transition: all 0.3s;
   right: 0;
-  bottom: 16px;
+  bottom: 14px;
   width: calc(50% - 226px);
   height: 1px;
   background-color: #dadada;
+  -webkit-transition: all 0s;
+  -moz-transition: all 0s;
+  -o-transition: all 0s;
+  transition: all 0s;
 }
 .header .headerContent {
   padding: 50px 0;
@@ -1354,6 +1386,9 @@ button {
   -o-transition: all 0.3s;
   transition: all 0.3s;
   background-color: #418974;
+}
+.breadСrumbs ul li:first-child span {
+  color: #000;
 }
 .breadСrumbs ul a {
   font-weight: 400;
@@ -3214,6 +3249,7 @@ button {
   .menuBurger {
     display: block;
     z-index: 11;
+    margin-top: -50px;
   }
 
   .menu {
@@ -3756,6 +3792,10 @@ button {
     padding: 0 10px;
   }
 
+  .menuBurger {
+    margin-top: -20px;
+  }
+
   .header {
     height: 94px;
   }
@@ -3931,6 +3971,10 @@ button {
 
   .modalBlock .inputList {
     margin-top: 0;
+  }
+
+  .pageWrapper {
+    padding-top: 94px;
   }
 }
 
