@@ -8,6 +8,13 @@ $(document).ready(function () {
 
     if ($(".header").length) {
         let header = $('.header');
+
+        if ($(window).scrollTop() > 1) {
+            header.addClass('fixed');
+        } else {
+            header.removeClass('fixed');
+        }
+
         $(window).scroll(function () {
             if ($(window).scrollTop() > 1) {
                 header.addClass('fixed');
@@ -216,4 +223,15 @@ $(document).ready(function () {
 
     }
 
+    if ($('.becomePartner').length > 0) {
+        $("#phoneInput").inputmask({
+            mask: "+7(999) 999-99-99",
+            placeholder: "*",
+            clearIncomplete: true
+        });
+        $("#emailInput").inputmask({
+            mask: "*{3,20}@*{3,20}.*{3,20}",
+            clearIncomplete: true
+        });
+    }
 })
