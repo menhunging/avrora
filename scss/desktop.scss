@@ -108,6 +108,21 @@
         width: 419px;
         top: 32px;
         margin-left: -239px;
+        height: 119px;
+        img {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            object-fit: cover;
+            object-position: center;
+            margin-top: -60px;
+            &.fixed {
+                width: 149px;
+                height: 145px;
+                margin-top: -67px;
+                margin-left: -4px;
+            }
+        }
     }
 }
 
@@ -233,8 +248,9 @@
     .blockTitle {
         @include before {
             background-image: url("../img/back-toh-about.png");
-            width: 468px;
+            width: 445px;
             height: 640px;
+            background-position: -23px center;
         }
     }
 
@@ -332,10 +348,11 @@
     .blockTitle {
         @include before {
             background-image: url("../img/back-toh-media.png");
-            width: 275px;
+            width: 254px;
             height: 630px;
             right: calc(100% + 4px);
             top: -216px;
+            background-position: -21px center;
         }
     }
     .desc {
@@ -1061,6 +1078,13 @@
             }
         }
     }
+    .linkFancyBox {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
 }
 
 .downloadFilesWrapper {
@@ -1170,6 +1194,9 @@
             opacity: 1;
         }
     }
+    .linkFancyBox{
+        display: none;
+    }
 }
 
 .errorWrapper {
@@ -1273,7 +1300,7 @@
 
 .newsWrapper {
     position: relative;
-    padding: 18px 0;
+    padding: 18px 0 54px 0;
     @include before {
         left: calc(50% - 931px);
         top: -155px;
@@ -1294,18 +1321,26 @@
         height: 630px;
         margin-top: -508px;
     }
+    .controls {
+        display: flex;
+        justify-content: center;
+        .btn {
+            min-width: 238px;
+        }
+    }
 }
 
 .news {
     display: flex;
     flex-wrap: wrap;
-
+    margin-bottom: -60px;
     .new {
         position: relative;
         width: 50%;
         display: flex;
         flex-wrap: wrap;
         margin-bottom: 185px;
+
         @include before {
             width: 840px;
             height: 410px;
@@ -1467,6 +1502,14 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        position: relative;
+        a {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
     }
     .slide-arrow {
         position: absolute;

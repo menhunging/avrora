@@ -156,6 +156,13 @@ $(document).ready(function () {
                 {
                     breakpoint: 768,
                     settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                    }
+                },
+                {
+                    breakpoint: 640,
+                    settings: {
                         slidesToShow: 2,
                         slidesToScroll: 2,
                     }
@@ -191,6 +198,7 @@ $(document).ready(function () {
     if ($('.picList').length > 0) {
 
         let pictureBig = $('.picBig')
+        let pictureBigInvis = $('.picBig .linkFancyBox')
         let slider = $('.picList')
         let sliderItem = $('.picList .item')
 
@@ -214,11 +222,13 @@ $(document).ready(function () {
 
         sliderItem.click(function () {
             slider.slick('slickGoTo', $(this).attr('data-slick-index'));
+            pictureBigInvis.attr('href', img)
         })
 
         slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
             let img = $('.picList .item[data-slick-index=' + nextSlide + '] img').attr('src')
             pictureBig.css('background-image', 'url(' + img + ')');
+            pictureBigInvis.attr('href', img)
         });
 
     }

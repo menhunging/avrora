@@ -29,6 +29,11 @@
     &.btnGreen {
         background-color: #418974;
         color: #fff;
+        .icon {
+            margin-left: 10px;
+            fill: #fff;
+            stroke: #fff;
+        }
         &:hover {
             background-color: #286855;
         }
@@ -37,6 +42,11 @@
         border: 1px solid #418974;
         color: #418974;
         background-color: transparent;
+        .icon {
+            margin-left: 10px;
+            fill: #286855;
+            stroke: #286855;
+        }
         &:after {
             border-color: #418974;
         }
@@ -46,6 +56,18 @@
             &:after {
                 border-color: #fff;
             }
+            .icon {
+                fill: #fff;
+                stroke: #fff;
+            }
+        }
+    }
+    &.btnMore {
+        .icon {
+            @include transition(all 0.3s);
+        }
+        &:after {
+            display: none;
         }
     }
 }

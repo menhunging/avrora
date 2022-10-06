@@ -128,6 +128,7 @@
     }
 
     .news {
+        margin-bottom: 0;
         .new {
             margin-bottom: 140px;
         }
@@ -466,7 +467,7 @@
     .menuBurger {
         display: block;
         z-index: 11;
-        margin-top: -50px;
+        margin-top: -20px;
     }
 
     .menu {
@@ -517,13 +518,23 @@
         }
         .logoWrapper {
             margin-left: 0;
-            width: 400px;
+            width: 370px;
             position: relative;
             left: 0;
             top: 0;
             img {
                 width: 100px;
+                margin-top: -45px;
+                &.fixed {
+                    width: 104px;
+                    height: 110px;
+                    margin-top: -50px;
+                    margin-left: 2px;
+                }
             }
+        }
+        &.fixed {
+            padding-bottom: 0;
         }
     }
 
@@ -793,8 +804,8 @@
 
     .sliderCertificate {
         .item {
-            height: auto;
-            padding-top: calc(32 / 200 * 100%);
+            height: 260px;
+            background-size: contain;
         }
     }
 
@@ -1073,7 +1084,7 @@
 
     .sliderCertificate {
         .item {
-            // height: 300px;
+            height: 280px;
         }
     }
 
@@ -1107,14 +1118,23 @@
         height: 94px;
         .logoWrapper {
             width: 230px;
+            height: 66px;
             img {
                 width: 70px;
+                margin-top: -30px;
+                &.fixed {
+                    width: 73px;
+                    height: 77px;
+                    margin-top: -34px;
+                    margin-left: 0px;
+                }
             }
             .text {
-                margin-left: 10px;
                 font-size: 12px;
                 line-height: 14px;
                 top: 0;
+                margin-left: 0;
+                width: 65%;
             }
         }
     }
@@ -1303,8 +1323,6 @@
 
     .sliderCertificate {
         .item {
-            height: auto;
-            padding-top: calc(32 / 200 * 100%);
         }
     }
 
