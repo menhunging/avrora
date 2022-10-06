@@ -261,6 +261,7 @@
         .item {
             width: calc((100% / 3) - 33px);
             margin: 0 10.5px 10.5px;
+            @include invisLink;
         }
         .picture {
             width: 100%;
@@ -349,10 +350,11 @@
         @include before {
             background-image: url("../img/back-toh-media.png");
             width: 254px;
-            height: 630px;
-            right: calc(100% + 4px);
-            top: -216px;
-            background-position: -21px center;
+            height: 440px;
+            right: calc(100% + 17px);
+            top: 20px;
+            background-position: -249px 0;
+            background-size: 221%;
         }
     }
     .desc {
@@ -395,6 +397,8 @@
         }
     }
     .picture {
+        @include invisLink;
+
         width: 469px;
         height: 353px;
         position: relative;
@@ -1194,7 +1198,7 @@
             opacity: 1;
         }
     }
-    .linkFancyBox{
+    .linkFancyBox {
         display: none;
     }
 }
@@ -1373,6 +1377,7 @@
         height: 277px;
         background-position: center;
         background-repeat: no-repeat;
+        @include invisLink;
     }
     .newText {
         flex: 1;

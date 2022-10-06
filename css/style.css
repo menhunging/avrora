@@ -1069,6 +1069,21 @@ button {
 .aboutMain .aboutList .item {
   width: calc(33.3333333333% - 33px);
   margin: 0 10.5px 10.5px;
+  position: relative;
+}
+.aboutMain .aboutList .item > a,
+.aboutMain .aboutList .item .invisBtn {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-indent: 200%;
+  white-space: nowrap;
+  cursor: pointer;
+  z-index: 5;
 }
 .aboutMain .aboutList .picture {
   width: 100%;
@@ -1166,10 +1181,11 @@ button {
   transition: all 0.3s;
   background-image: url("../img/back-toh-media.png");
   width: 254px;
-  height: 630px;
-  right: calc(100% + 4px);
-  top: -216px;
-  background-position: -21px center;
+  height: 440px;
+  right: calc(100% + 17px);
+  top: 20px;
+  background-position: -249px 0;
+  background-size: 221%;
 }
 .mediaMain .desc {
   font-weight: 400;
@@ -1209,6 +1225,7 @@ button {
   opacity: 0.5;
 }
 .sliderMedia .picture {
+  position: relative;
   width: 469px;
   height: 353px;
   position: relative;
@@ -1216,6 +1233,20 @@ button {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.sliderMedia .picture > a,
+.sliderMedia .picture .invisBtn {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-indent: 200%;
+  white-space: nowrap;
+  cursor: pointer;
+  z-index: 5;
 }
 .sliderMedia .picture:before {
   content: "";
@@ -2309,6 +2340,21 @@ button {
   height: 277px;
   background-position: center;
   background-repeat: no-repeat;
+  position: relative;
+}
+.news .newPicture > a,
+.news .newPicture .invisBtn {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-indent: 200%;
+  white-space: nowrap;
+  cursor: pointer;
+  z-index: 5;
 }
 .news .newText {
   flex: 1;
