@@ -248,9 +248,9 @@
     .blockTitle {
         @include before {
             background-image: url("../img/back-toh-about.png");
-            width: 445px;
+            width: 480px;
             height: 640px;
-            background-position: -23px center;
+            background-position: center;
         }
     }
 
@@ -349,12 +349,11 @@
     .blockTitle {
         @include before {
             background-image: url("../img/back-toh-media.png");
-            width: 254px;
-            height: 440px;
-            right: calc(100% + 17px);
-            top: 20px;
-            background-position: -249px 0;
-            background-size: 221%;
+            width: 510px;
+            height: 630px;
+            right: calc(100% + 5px);
+            top: -215px;
+            background-position: center;
         }
     }
     .desc {
