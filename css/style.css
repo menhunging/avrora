@@ -1182,7 +1182,7 @@ button {
   background-image: url("../img/back-toh-media.png");
   width: 510px;
   height: 630px;
-  right: calc(100% + 5px);
+  right: calc(100% - 32px);
   top: -215px;
   background-position: center;
 }
