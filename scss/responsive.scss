@@ -66,6 +66,11 @@
             margin-top: 20px;
             left: 0;
         }
+        .blockTitle {
+            &:before {
+                right: calc(100% - 53px);
+            }
+        }
     }
 
     .footer {
@@ -523,13 +528,11 @@
             left: 0;
             top: 0;
             img {
-                width: 100px;
-                margin-top: -45px;
+                width: 104px;
+                height: 110px;
+                margin-top: -50px;
+                margin-left: 2px;
                 &.fixed {
-                    width: 104px;
-                    height: 110px;
-                    margin-top: -50px;
-                    margin-left: 2px;
                 }
             }
         }
@@ -1120,13 +1123,11 @@
             width: 230px;
             height: 66px;
             img {
-                width: 70px;
-                margin-top: -30px;
+                width: 73px;
+                height: 77px;
+                margin-top: -34px;
+                margin-left: 0px;
                 &.fixed {
-                    width: 73px;
-                    height: 77px;
-                    margin-top: -34px;
-                    margin-left: 0px;
                 }
             }
             .text {

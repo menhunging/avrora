@@ -886,15 +886,11 @@ button {
   top: 50%;
   object-fit: cover;
   object-position: center;
-  margin-top: -60px;
-}
-.header .logoWrapper img.fixed {
   width: 149px;
   height: 145px;
   margin-top: -67px;
   margin-left: -4px;
 }
-
 .grettingsWrapper {
   position: relative;
 }
@@ -3048,6 +3044,9 @@ button {
     margin-top: 20px;
     left: 0;
   }
+  .mediaMain .blockTitle:before {
+    right: calc(100% - 53px);
+  }
 
   .footer .footerContent {
     padding: 50px 0;
@@ -3430,10 +3429,6 @@ button {
     top: 0;
   }
   .header .logoWrapper img {
-    width: 100px;
-    margin-top: -45px;
-  }
-  .header .logoWrapper img.fixed {
     width: 104px;
     height: 110px;
     margin-top: -50px;
@@ -3941,10 +3936,6 @@ button {
     height: 66px;
   }
   .header .logoWrapper img {
-    width: 70px;
-    margin-top: -30px;
-  }
-  .header .logoWrapper img.fixed {
     width: 73px;
     height: 77px;
     margin-top: -34px;

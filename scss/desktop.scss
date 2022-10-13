@@ -115,12 +115,12 @@
             top: 50%;
             object-fit: cover;
             object-position: center;
-            margin-top: -60px;
+            width: 149px;
+            height: 145px;
+            margin-top: -67px;
+            margin-left: -4px;
             &.fixed {
-                width: 149px;
-                height: 145px;
-                margin-top: -67px;
-                margin-left: -4px;
+               
             }
         }
     }
